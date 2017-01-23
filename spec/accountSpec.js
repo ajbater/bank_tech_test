@@ -58,4 +58,15 @@ describe('Account', function() {
       expect(account._transactionHistory[0]._newBalance).toEqual(-500);
     });
   });
+
+  describe('requesting the statement', function() {
+    beforeEach(function() {
+      account.deposit(500);
+      account.withdraw(50);
+    });
+
+    it('has a method for padding strings', function() {
+      expect('padding' in account).toBe(true);
+    });
+  });
 });
