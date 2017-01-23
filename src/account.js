@@ -1,4 +1,4 @@
-// responsible for: managing the balance
+// the part of the program that a user would interact with
 function Account() {
   this._balance = 0.00;
   this._statement = new Statement();

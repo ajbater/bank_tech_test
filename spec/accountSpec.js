@@ -59,14 +59,10 @@ describe('Account', function() {
     });
   });
 
-  // describe('requesting the statement', function() {
-  //   beforeEach(function() {
-  //     account.deposit(500);
-  //     account.withdraw(50);
-  //   });
-  //
-  //   it('creates a new statement when you request one', function() {
-  //     expect(account._statement).toEqual(jasmine.any(Statement));
-  //   });
-  // });
+  describe('requesting the statement', function() {
+    beforeEach(function() {
+      account.deposit(500);
+      account.withdraw(50);
+    });
+  });
 });
