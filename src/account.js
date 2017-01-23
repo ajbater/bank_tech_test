@@ -17,9 +17,3 @@ Account.prototype.withdraw = function(amount) {
   transaction = new Transaction(null, amount, newBalance);
   this._statement._transactionHistory.push(transaction);
 };
-
-// Account.prototype.createTransaction = function(type, amount) {
-//   var newBalance = this._balance;
-//   var transaction = new Transaction(type, amount, newBalance);
-//   this._transactionHistory.push(transaction);
-// };

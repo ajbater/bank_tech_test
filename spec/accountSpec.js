@@ -28,10 +28,10 @@ describe('Account', function() {
       expect(account._statement._transactionHistory.length).toEqual(1);
     });
 
-    // it('making a deposit will create a new transaction object', function() {
-    //   expect(account._transactionHistory[0]).toEqual(jasmine.any(Transaction))
-    // });
-    //
+    it('making a deposit will create a new transaction object', function() {
+      expect(account._statement._transactionHistory[0]).toEqual(jasmine.any(Transaction))
+    });
+
     // it('making a deposit will pass the new balance to the transaction object', function() {
     //   expect(account._transactionHistory[0]._newBalance).toEqual('500.00');
     // });
@@ -50,10 +50,10 @@ describe('Account', function() {
       expect(account._statement._transactionHistory.length).toEqual(1);
     });
 
-    // it('making a withdrawal will create a new transaction object', function() {
-    //   expect(account._transactionHistory[0]).toEqual(jasmine.any(Transaction))
-    // });
-    //
+    it('making a withdrawal will create a new transaction object', function() {
+      expect(account._statement._transactionHistory[0]).toEqual(jasmine.any(Transaction))
+    });
+
     // it('making a withdrawl will pass the new balance to the transaction object', function() {
     //   expect(account._transactionHistory[0]._newBalance).toEqual('-500.00');
     // });
