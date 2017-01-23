@@ -4,7 +4,7 @@ describe('Transaction', function() {
   var transaction;
 
   beforeEach(function() {
-    transaction = new Transaction('withdraw', 500, '10-01-2012');
+    transaction = new Transaction('withdraw', 500);
   });
 
   it('has a type, which will be passed upon instantiation', function() {
