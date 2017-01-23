@@ -3,6 +3,6 @@ function Account() {
   this._transactions = [];
 };
 
-Account.prototype.deposit = function() {
-
+Account.prototype.deposit = function(amount) {
+  this._balance += amount;
 };
