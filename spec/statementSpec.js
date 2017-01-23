@@ -10,4 +10,8 @@ describe('statement', function() {
   it('has the capacity to store transactions', function() {
     expect(statement._transactionHistory).toEqual([]);
   });
+
+  it('is instantiated with a statementPresentation object', function() {
+    expect(statement._statementPresentation).toEqual(jasmine.any(StatementPresentation));
+  });
 });
