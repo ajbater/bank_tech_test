@@ -4,7 +4,7 @@ describe('StatementPresentation', function() {
   var statementPresentation;
 
   beforeEach(function() {
-    statementPresentation = new StatementPresentation;
+    statementPresentation = new StatementPresentation();
   });
 
   it('has a function that formats the date', function() {
@@ -14,5 +14,9 @@ describe('StatementPresentation', function() {
 
   it('has a function that adds padding to strings', function() {
     expect(statementPresentation.pad(123)).toEqual('        123');
+  });
+
+  it('has first line function that creates the first line of the statement', function() {
+    expect(statementPresentation.firstLine()).toEqual('       date ||     credit ||      debit ||    balance')
   });
 });
