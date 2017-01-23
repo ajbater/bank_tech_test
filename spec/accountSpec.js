@@ -66,7 +66,11 @@ describe('Account', function() {
     });
 
     it('has a method for padding strings', function() {
-      expect('padding' in account).toBe(true);
+      expect('pad' in account).toBe(true);
+    });
+
+    it('can add the correct amount of whitespace to strings', function() {
+      expect(account.pad('     ', '123', true)).toEqual('  123');
     });
   });
 });

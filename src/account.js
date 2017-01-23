@@ -21,6 +21,12 @@ Account.prototype.createTransaction = function(type, amount) {
   this._transactionHistory.push(transaction);
 };
 
-Account.prototype.padding = function() {
-
+Account.prototype.pad = function(padding, string, padLeft) {
+  if (typeof string === 'undefined')
+  return padding;
+  if (padLeft) {
+    return (padding + string).slice(-padding.length);
+  } else {
+    return (string + padding).substring(0, padding.length);
+  }
 };
