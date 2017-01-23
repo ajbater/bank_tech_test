@@ -29,4 +29,9 @@ describe('Account', function() {
     account.deposit(500);
     expect(account._transactionHistory.length).toEqual(1);
   });
+
+  it('making a withdrawal will add a new transaction to the transaction history', function() {
+    account.withdraw(500);
+    expect(account._transactionHistory.length).toEqual(1);
+  });
 });

@@ -9,6 +9,8 @@ Account.prototype.deposit = function(amount, date) {
   this._transactionHistory.push(transaction);
 };
 
-Account.prototype.withdraw = function(amount) {
+Account.prototype.withdraw = function(amount, date) {
   this._balance -= amount;
+  var transaction = new Transaction('deposit', amount, date)
+  this._transactionHistory.push(transaction);
 };
