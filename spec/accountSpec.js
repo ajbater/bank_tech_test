@@ -64,5 +64,9 @@ describe('Account', function() {
       account.deposit(500);
       account.withdraw(50);
     });
+
+    it('has a function that prepares a statement', function() {
+      expect('prepareStatement' in account).toBe(true);
+    });
   });
 });

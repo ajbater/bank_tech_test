@@ -25,3 +25,7 @@ Account.prototype.credit = function(amount) {
 Account.prototype.debit = function(amount) {
   this._balance -= amount;
 };
+
+Account.prototype.prepareStatement = function() {
+  
+};
