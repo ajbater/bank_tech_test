@@ -15,10 +15,6 @@ describe('Transaction', function() {
     expect('_amount' in transaction).toBe(true);
   });
 
-  it('has a date, which will be set upon instantiation', function() {
-    expect('_date' in transaction).toBe(true);
-  });
-
   it('has a date, which will be a date object', function() {
     var newTransaction = new Transaction('withdraw', 500, '10-01-2012');
     expect(newTransaction._date).toEqual(jasmine.any(Date));
