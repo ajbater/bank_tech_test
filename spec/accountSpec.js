@@ -15,10 +15,6 @@ describe('Account', function() {
     expect(account._transactions).toEqual([]);
   });
 
-  it('has a deposit function', function() {
-    expect('deposit' in account).toBe(true);
-  });
-
   it('has a deposit function which adds the amount passed in to the account balance', function() {
     account.deposit(500);
     expect(account._balance).toEqual(500);
