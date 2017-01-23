@@ -14,4 +14,8 @@ describe('Account', function() {
   it('has the capacity to store transactions', function() {
     expect(account._transactions).toEqual([]);
   });
+
+  it('has a deposit function', function() {
+    expect('deposit' in account).toBe(true);
+  });
 });
