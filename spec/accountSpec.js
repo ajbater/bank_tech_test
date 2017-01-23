@@ -20,7 +20,12 @@ describe('Account', function() {
     expect(account._balance).toEqual(500)
   });
 
-  it('has a withdraw function which deducts the amount passed in from the account balance', function() {
+  it('has a withdraw function', function() {
     expect('withdraw' in account).toBe(true);
+  });
+
+  it('has a withdraw function which deducts the amount passed in from the account balance', function() {
+    account.withdraw(500);
+    expect(account._balance).toEqual(-500);
   });
 });
