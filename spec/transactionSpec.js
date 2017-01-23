@@ -14,4 +14,8 @@ describe('Transaction', function() {
   it('has an amount, which will be be set upon instantiation', function() {
     expect('_amount' in transaction).toBe(true);
   });
+
+  it('has a date, which will be set upon instantiation', function() {
+    expect('_date' in transaction).toBe(true);
+  });
 });
