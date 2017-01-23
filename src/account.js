@@ -20,3 +20,7 @@ Account.prototype.createTransaction = function(type, amount) {
   var transaction = new Transaction(type, amount, newBalance);
   this._transactionHistory.push(transaction);
 };
+
+Account.prototype.createStatement = function() {
+  this._statement = new Statement();
+};

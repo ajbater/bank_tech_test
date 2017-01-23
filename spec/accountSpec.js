@@ -64,5 +64,10 @@ describe('Account', function() {
       account.deposit(500);
       account.withdraw(50);
     });
+
+    it('creates a new statement when you request one', function() {
+      account.createStatement();
+      expect(account._statement).toEqual(jasmine.any(Statement));
+    });
   });
 });
