@@ -65,12 +65,12 @@ describe('Account', function() {
       account.withdraw(50);
     });
 
-    it('has a method for padding strings', function() {
-      expect('pad' in account).toBe(true);
-    });
-
     it('can add the correct amount of whitespace to strings', function() {
       expect(account.pad(123)).toEqual('        123');
+    });
+
+    it('can print the first line of the statement', function() {
+      expect(account.firstLine()).toEqual('       date||     credit||      debit||    balance')
     });
   });
 });

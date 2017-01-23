@@ -32,3 +32,8 @@ Account.prototype.pad = function(string) {
     return (string + padding).substring(0, padding.length);
   }
 };
+
+Account.prototype.firstLine = function() {
+  var columns = [this.pad('date'), this.pad('credit'), this.pad('debit'), this.pad('balance')];
+  return columns.join('||');
+};
