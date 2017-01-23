@@ -21,8 +21,9 @@ Account.prototype.createTransaction = function(type, amount) {
   this._transactionHistory.push(transaction);
 };
 
-Account.prototype.pad = function(padding, string) {
+Account.prototype.pad = function(string) {
   padLeft = true;
+  padding = '           '
   if (typeof string === 'undefined')
   return padding;
   if (padLeft) {

@@ -70,7 +70,7 @@ describe('Account', function() {
     });
 
     it('can add the correct amount of whitespace to strings', function() {
-      expect(account.pad('     ', 123)).toEqual('  123');
+      expect(account.pad(123)).toEqual('        123');
     });
   });
 });
