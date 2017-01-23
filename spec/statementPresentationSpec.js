@@ -7,6 +7,10 @@ describe('StatementPresentation', function() {
     statementPresentation = new StatementPresentation();
   });
 
+  it('stores each row of the statement', function() {
+    expect(statementPresentation._rows).toEqual([]);
+  });
+
   it('has a function that formats the date', function() {
     var date = new Date('01-23-2017')
     expect(statementPresentation.formatDate(date)).toEqual('23/01/2017')
@@ -17,6 +21,7 @@ describe('StatementPresentation', function() {
   });
 
   it('has first line function that creates the first line of the statement', function() {
-    expect(statementPresentation.columnHeaders()).toEqual('       date ||     credit ||      debit ||    balance')
+    statementPresentation.columnHeaders();
+    expect(statementPresentation._rows[0]).toEqual('       date ||     credit ||      debit ||    balance')
   });
 });
