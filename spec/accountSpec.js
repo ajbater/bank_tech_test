@@ -15,23 +15,27 @@ describe('Account', function() {
     expect(account._transactionHistory).toEqual([]);
   });
 
-  it('has a deposit function which adds the amount passed in to the account balance', function() {
-    account.deposit(500);
-    expect(account._balance).toEqual(500)
+  describe('depositing funds', function() {
+    it('has a deposit function which adds the amount passed in to the account balance', function() {
+      account.deposit(500);
+      expect(account._balance).toEqual(500)
+    });
+
+    it('making a deposit will add a new transaction to the transaction history', function() {
+      account.deposit(500);
+      expect(account._transactionHistory.length).toEqual(1);
+    });
   });
 
-  it('has a withdraw function which deducts the amount passed in from the account balance', function() {
-    account.withdraw(500);
-    expect(account._balance).toEqual(-500);
-  });
+  describe('withdrawing funds', function() {
+    it('has a withdraw function which deducts the amount passed in from the account balance', function() {
+      account.withdraw(500);
+      expect(account._balance).toEqual(-500);
+    });
 
-  it('making a deposit will add a new transaction to the transaction history', function() {
-    account.deposit(500);
-    expect(account._transactionHistory.length).toEqual(1);
-  });
-
-  it('making a withdrawal will add a new transaction to the transaction history', function() {
-    account.withdraw(500);
-    expect(account._transactionHistory.length).toEqual(1);
+    it('making a withdrawal will add a new transaction to the transaction history', function() {
+      account.withdraw(500);
+      expect(account._transactionHistory.length).toEqual(1);
+    });
   });
 });
