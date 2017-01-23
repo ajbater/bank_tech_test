@@ -3,4 +3,14 @@ function Transaction(type, amount, newBalance) {
   this._amount = amount;
   this._date = new Date;
   this._newBalance = newBalance;
+
+  Transaction.prototype.formatDate = function() {
+    date = this._date
+    day = '' + date.getDate(),
+    month = '' + (date.getMonth() + 1),
+    year = date.getFullYear();
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+    return [day, month, year].join('/');
+  };
 };
