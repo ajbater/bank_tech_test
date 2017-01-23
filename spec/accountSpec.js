@@ -53,5 +53,9 @@ describe('Account', function() {
     it('making a withdrawal will create a new transaction object', function() {
       expect(account._transactionHistory[0]).toEqual(jasmine.any(Transaction))
     });
+
+    it('making a withdrawl will pass the new balance to the transaction object', function() {
+      expect(account._transactionHistory[0]._newBalance).toEqual(-500);
+    });
   });
 });
