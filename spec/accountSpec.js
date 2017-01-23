@@ -11,9 +11,9 @@ describe('Account', function() {
     expect(account._balance).toEqual(0);
   });
 
-  // it('has the capacity to store transactions', function() {
-  //   expect(account._transactionHistory).toEqual([]);
-  // });
+  it('each new instance of account has a statement', function() {
+    expect(account._statement).toEqual(jasmine.any(Statement));
+  });
 
   // describe('depositing funds', function() {
   //   beforeEach(function() {
