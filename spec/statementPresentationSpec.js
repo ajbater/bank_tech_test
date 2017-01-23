@@ -11,4 +11,8 @@ describe('StatementPresentation', function() {
     var date = new Date('01-23-2017')
     expect(statementPresentation.formatDate(date)).toEqual('23/01/2017')
   });
+
+  it('has a function that adds padding to strings', function() {
+    expect(statementPresentation.pad(123)).toEqual('        123');
+  });
 });

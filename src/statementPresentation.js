@@ -8,3 +8,12 @@ StatementPresentation.prototype.formatDate = function(date) {
   if (day.length < 2) day = '0' + day;
   return [day, month, year].join('/');
 };
+
+StatementPresentation.prototype.pad = function(string) {
+  padding = '           '
+  if (string === null) {
+    return padding;
+  } else {
+    return (padding + string).slice(-padding.length);
+  }
+};
