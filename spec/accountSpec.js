@@ -66,8 +66,11 @@ describe('Account', function() {
     });
 
     it('creates a new statement when you request one', function() {
-      account.createStatement();
       expect(account._statement).toEqual(jasmine.any(Statement));
     });
+
+    // it('can add each transaction to the statement', function() {
+    //   expect(account._statement[0]).toEqual(['23/01/2016', '500.00', undefined, '500.00']);
+    // });
   });
 });

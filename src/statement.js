@@ -1,4 +1,6 @@
-function Statement() {};
+function Statement() {
+  this._transactions = [];
+};
 
 Statement.prototype.pad = function(string) {
   padLeft = true;
