@@ -32,9 +32,9 @@ describe('Account', function() {
       expect(account._statement._transactionHistory[0]).toEqual(jasmine.any(Transaction))
     });
 
-    // it('making a deposit will pass the new balance to the transaction object', function() {
-    //   expect(account._transactionHistory[0]._newBalance).toEqual('500.00');
-    // });
+    it('making a deposit will pass the new balance to the transaction object', function() {
+      expect(account._statement._transactionHistory[0]._newBalance).toEqual(500.00);
+    });
   });
 
   describe('withdrawing funds', function() {
@@ -54,9 +54,9 @@ describe('Account', function() {
       expect(account._statement._transactionHistory[0]).toEqual(jasmine.any(Transaction))
     });
 
-    // it('making a withdrawl will pass the new balance to the transaction object', function() {
-    //   expect(account._transactionHistory[0]._newBalance).toEqual('-500.00');
-    // });
+    it('making a withdrawl will pass the new balance to the transaction object', function() {
+      expect(account._statement._transactionHistory[0]._newBalance).toEqual(-500.00);
+    });
   });
 
   // describe('requesting the statement', function() {
