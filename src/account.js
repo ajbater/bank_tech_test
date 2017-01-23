@@ -5,14 +5,18 @@ function Account() {
 
 Account.prototype.deposit = function(amount) {
   this._balance += amount;
-  newBalance = this._balance;
-  var transaction = new Transaction('deposit', amount, newBalance);
-  this._transactionHistory.push(transaction);
+  var type = 'deposit'
+  this.createTransaction(type, amount);
 };
 
 Account.prototype.withdraw = function(amount) {
   this._balance -= amount;
-  newBalance = this._balance;
-  var transaction = new Transaction('withdraw', amount, newBalance);
+  var type = 'withdraw';
+  this.createTransaction(type, amount);
+};
+
+Account.prototype.createTransaction = function(type, amount) {
+  var newBalance = this._balance;
+  var transaction = new Transaction(type, amount, newBalance);
   this._transactionHistory.push(transaction);
 };
