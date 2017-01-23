@@ -1,10 +1,12 @@
 function Account() {
   this._balance = 0;
-  this._transactions = [];
+  this._transactionHistory = [];
 };
 
-Account.prototype.deposit = function(amount) {
+Account.prototype.deposit = function(amount, date) {
   this._balance += amount;
+  var transaction = new Transaction('deposit', amount, date)
+  this._transactionHistory.push(transaction);
 };
 
 Account.prototype.withdraw = function(amount) {
