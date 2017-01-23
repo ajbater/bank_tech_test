@@ -22,4 +22,6 @@ describe('Transaction', function() {
   it('has a new balance property', function() {
     expect('_newBalance' in transaction).toBe(true);
   });
+
+  // it('when a deposit is made the ')
 });
