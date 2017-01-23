@@ -1,21 +1,25 @@
 'use strict';
 
 describe('Transaction', function() {
-  var newTransaction;
+  var transaction;
 
   beforeEach(function() {
-    newTransaction = new Transaction('withdraw', 500, '10-01-2012');
+    transaction = new Transaction('withdraw', 500, '10-01-2012');
   });
 
   it('has a type, which will be passed upon instantiation', function() {
-    expect(newTransaction._type).toEqual('withdraw');
+    expect(transaction._type).toEqual('withdraw');
   });
 
   it('has an amount, which will be an integer', function() {
-    expect(newTransaction._amount).toEqual(500);
+    expect(transaction._amount).toEqual(500);
   });
 
   it('has a date, which will be a date object', function() {
-    expect(newTransaction._date).toEqual(jasmine.any(Date));
+    expect(transaction._date).toEqual(jasmine.any(Date));
+  });
+
+  it('has a new balance property', function() {
+    expect('_newBalance' in transaction).toBe(true);
   });
 });
