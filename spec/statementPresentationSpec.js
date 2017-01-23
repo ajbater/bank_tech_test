@@ -24,4 +24,8 @@ describe('StatementPresentation', function() {
     statementPresentation.columnHeaders();
     expect(statementPresentation._rows[0]).toEqual('       date ||     credit ||      debit ||    balance')
   });
+
+  it('has a print statement function', function() {
+    expect('printStatement' in statementPresentation).toBe(true);
+  });
 });

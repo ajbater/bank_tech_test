@@ -54,7 +54,7 @@ describe('Account', function() {
       expect(account._statement._transactionHistory[0]).toEqual(jasmine.any(Transaction))
     });
 
-    it('making a withdrawl will pass the new balance to the transaction object', function() {
+    it('making a withdrawal will pass the new balance to the transaction object', function() {
       expect(account._statement._transactionHistory[0]._newBalance).toEqual(-500.00);
     });
   });
@@ -65,8 +65,13 @@ describe('Account', function() {
       account.withdraw(50);
     });
 
-    it('has a function that prepares a statement', function() {
-      expect('prepareStatement' in account).toBe(true);
-    });
+    // it('has a function that prepares a statement', function() {
+    //   expect('prepareStatement' in account).toBe(true);
+    // });
+    //
+    // it('can prepare the statement by getting each transaction ready', function() {
+    //   account.prepareStatement();
+    //
+    // });
   });
 });

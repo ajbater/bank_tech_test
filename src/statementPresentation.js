@@ -24,3 +24,7 @@ StatementPresentation.prototype.columnHeaders = function() {
   var columns = [this.pad('date'), this.pad('credit'), this.pad('debit'), this.pad('balance')];
   this._rows.push(columns.join(' ||'));
 };
+
+StatementPresentation.prototype.printStatement = function() {
+  
+};
