@@ -17,6 +17,6 @@ describe('StatementPresentation', function() {
   });
 
   it('has first line function that creates the first line of the statement', function() {
-    expect(statementPresentation.firstLine()).toEqual('       date ||     credit ||      debit ||    balance')
+    expect(statementPresentation.columnHeaders()).toEqual('       date ||     credit ||      debit ||    balance')
   });
 });

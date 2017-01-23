@@ -18,7 +18,7 @@ StatementPresentation.prototype.pad = function(string) {
   }
 };
 
-StatementPresentation.prototype.firstLine = function() {
+StatementPresentation.prototype.columnHeaders = function() {
   var columns = [this.pad('date'), this.pad('credit'), this.pad('debit'), this.pad('balance')];
   return columns.join(' ||');
 };
