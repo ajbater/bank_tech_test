@@ -1,8 +1,8 @@
 function Transaction(type, amount, newBalance) {
   this._type = type;
-  this._amount = amount;
+  this._amount = amount.toFixed(2);
   this._date = new Date;
-  this._newBalance = newBalance;
+  this._newBalance = newBalance.toFixed(2);
 
   Transaction.prototype.formatDate = function() {
     date = this._date

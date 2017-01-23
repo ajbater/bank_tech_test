@@ -1,6 +1,4 @@
-function Statement() {
-
-};
+function Statement() {};
 
 Statement.prototype.pad = function(string) {
   padLeft = true;

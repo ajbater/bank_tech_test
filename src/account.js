@@ -1,5 +1,5 @@
 function Account() {
-  this._balance = 0;
+  this._balance = 0.00;
   this._transactionHistory = [];
 };
 

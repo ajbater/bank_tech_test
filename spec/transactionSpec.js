@@ -4,7 +4,7 @@ describe('Transaction', function() {
   var transaction;
 
   beforeEach(function() {
-    transaction = new Transaction('withdraw', 500);
+    transaction = new Transaction('withdraw', 500, 500);
   });
 
   it('has a type, which will be passed upon instantiation', function() {
@@ -12,7 +12,7 @@ describe('Transaction', function() {
   });
 
   it('has an amount, which will be an integer', function() {
-    expect(transaction._amount).toEqual(500);
+    expect(transaction._amount).toEqual('500.00');
   });
 
   it('has a date, which will be a date object', function() {
