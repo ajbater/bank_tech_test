@@ -19,4 +19,9 @@ describe('Transaction', function() {
     var newTransaction = new Transaction('withdraw', 500, '10-01-2012');
     expect(newTransaction._date).toEqual(jasmine.any(Date));
   });
+
+  it('has an amount, which will be an integer', function() {
+    var newTransaction = new Transaction('withdraw', 500, '10-01-2012');
+    expect(newTransaction._amount).toEqual(500);
+  });
 });
