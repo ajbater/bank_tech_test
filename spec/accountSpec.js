@@ -17,6 +17,10 @@ describe('Account', function() {
 
   it('has a deposit function which adds the amount passed in to the account balance', function() {
     account.deposit(500);
-    expect(account._balance).toEqual(500);
+    expect(account._balance).toEqual(500)
+  });
+
+  it('has a withdraw function which deducts the amount passed in from the account balance', function() {
+    expect('withdraw' in account).toBe(true);
   });
 });
